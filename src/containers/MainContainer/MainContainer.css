@@ -1,0 +1,45 @@
+.fondo{
+    background-image: url(../../components/img/FondoHome\ -\ copia.png);
+}
+
+.centrarDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.logo{
+    width: 35%;
+    height: 35%;
+}
+
+.icono{
+    width: 13%;
+    height: 13%;
+}
+
+.tarjetagrande{
+    width: 80mm;
+}
+
+.margenD{
+    margin-right: 15px;
+}
+
+.margenI{
+    margin-left: 15px;
+}
+
+.margenA{
+    margin-top: 15px;
+}
+
+.boton{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.centrartexto{
+    text-align: center;
+}
