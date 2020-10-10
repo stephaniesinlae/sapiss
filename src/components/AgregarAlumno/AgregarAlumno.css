@@ -1,0 +1,26 @@
+.margenB{
+    margin-bottom: 16px;
+}
+
+.centrarT{
+    text-align: center;
+}
+
+.letraTitulo{
+    font-size: 30px;
+    font-family: 'Chilanka', cursive;
+}
+
+.centrarAll{
+    display: flex;
+    justify-content: center;
+}
+
+.fondoY{
+    background-color: #FFD166 ;
+}
+
+.letraP{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}

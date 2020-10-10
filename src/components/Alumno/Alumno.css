@@ -1,0 +1,76 @@
+.centrarT{
+    text-align: center;
+}
+
+.card-body {
+    padding: 0.75px !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.pad{
+    padding-top: 25px;
+}
+
+.letraG{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Chilanka', cursive;
+}
+
+.letraP{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.centrarAll{
+    display: flex;
+    justify-content: center;
+}
+
+.alineadoD{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.alineadoI{
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+.fondoBoton{
+    background-color: #F25F5C;
+}
+
+.fondoC{
+    background-color: #06D6A0;
+}
+
+.fondoW{
+    background-color: #ffe6fe 
+}
+
+.fondoY{
+    background-color: #FFD166;
+}
+
+.fondoM{
+    background-color: #118AB2;
+}
+
+.columna{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fila{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}

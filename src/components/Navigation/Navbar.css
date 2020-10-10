@@ -1,0 +1,36 @@
+.logo{
+    width: 35%;
+    height: 35%;
+}
+
+.logoX{
+    width: 5%;
+    height: 5%;
+}
+
+.navColor {
+    background-color: #50514F;
+}
+
+.navbar-img {
+    height: 50px;
+    padding-right: 15px;
+}
+
+.derecha{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tipografia{
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+.mar{
+    margin-right: 7px;
+}
+/* 
+.tGrande{
+    width: 101%;
+}  */

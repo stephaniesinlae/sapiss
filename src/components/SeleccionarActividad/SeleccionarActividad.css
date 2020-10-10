@@ -1,0 +1,75 @@
+.fondoActividad{
+    background-image: url("../img/fondoCH.jpg");
+    background-size:cover;
+}
+
+.fondoSistemas{
+    background-image: url("../img/fondoA.gif");
+    background-size:cover;
+}
+
+.padd{
+    padding-left: 30%;
+}
+
+.negro{
+    background-color: black;
+}
+.sizeImg{
+    width: 35% ;
+}
+
+.tLetra{
+    padding-top: 15%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+    font-weight: 900;
+}
+
+.letraTodo{
+    font-family: 'Indie Flower', cursive;
+    font-size: 150%;
+    padding-left: 3%;
+}
+
+
+.letraParrafo{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.columnaa{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-30px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.avatar {
+    animation: float 5s ease infinite;
+    display: flex;
+}
+
+.avatar:hover
+{
+    animation-play-state: paused;
+}
+
+.letraA{
+    font-family: 'Satisfy', cursive;
+    font-size: 350%;
+    text-align: center;
+}

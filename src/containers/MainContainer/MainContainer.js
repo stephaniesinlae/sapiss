@@ -1,11 +1,12 @@
 import React from 'react';
 import Welcome from '../../components/Welcome/Welcome';
-import './MainContainer.css';
+import Footer from '../../components/Footer/Footer';
 
 const MainContainer = () => {
     return (
-        <section className="fondo">
+        <section>
             <Welcome />
+            <Footer />
         </section>
     )
 }

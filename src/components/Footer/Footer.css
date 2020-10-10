@@ -1,0 +1,21 @@
+.bg {
+    background-color:  #FF99FF;
+    width: 100%;
+    background-size: cover; 
+}
+
+.footerLogo{
+    height: 30px;
+    width: 30px;
+}
+
+.colocar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.margenA{
+    margin-top: 15px;
+}

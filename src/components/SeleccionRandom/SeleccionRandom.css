@@ -1,0 +1,38 @@
+.centrarT{
+    text-align: center;
+}
+
+.card-body {
+    padding: 0.75px !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.letraG{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Chilanka', cursive;
+}
+
+.letraP{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.centrarAll{
+    display: flex;
+    justify-content: center;
+}
+
+.fondoRandom{
+    background-color: #FFFDF6;
+}
+
+.columna{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
