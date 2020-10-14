@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AlumnoNota from '../AlumnoNota/AlumnoNota';
 import Nota from '../Nota/Nota';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import '../Alumno/Alumno.css'
 
 const MostrarNotaAlumno = () => {

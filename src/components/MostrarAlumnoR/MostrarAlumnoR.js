@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AlumnoR from '../AlumnoR/AlumnoR';
-import axios from 'axios';
-import '../Alumno/Alumno.css'
+import '../Alumno/Alumno.css';
 
-const MostrarAlumnoR = () => {
-    const [tasks, setTasks] = useState(undefined);
-    const ID = 'sapiss';
+const MostrarAlumnoR = ({list, getTasks}) => {
 
-    const getTasks = () => {
-        axios.get(`https://${ID}.firebaseio.com/alumno.json`)
-            .then(({ data }) => {setTasks(data)})      
-            .catch(()=> {setTasks(undefined)});
-    }
-    // Obtiene task al momento de cargar el componente
     useEffect(() => {
-        getTasks();
-    }, []);
+        console.log(list)
+    }, [list])
 
     return (
         <div className="pad centrarAll fondoC">
@@ -24,12 +15,12 @@ const MostrarAlumnoR = () => {
                     <div className="card-header text-white bg-info centrarT letraG" style={{ maxWidth: 30 + 'rem' }}>
                         Listado de Alumno Ingresados</div>
                     <br />
-                    {tasks && Object.keys(tasks).map((id) =>
+                    {list && Object.keys(list).map((id) =>
                         <AlumnoR
                             key={id}
                             id={id}
-                            nombre={tasks[id].nombre}
-                            apellido={tasks[id].apellido}
+                            nombre={list[id].nombre}
+                            apellido={list[id].apellido}
                             getTasks={getTasks}
                         />)}
                 </div>
