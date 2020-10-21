@@ -43,3 +43,8 @@
 .centrartexto{
     text-align: center;
 }
+
+.centrarTodo{
+    display: flex;
+    justify-content: center;
+}

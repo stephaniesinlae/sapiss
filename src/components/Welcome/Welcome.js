@@ -42,7 +42,7 @@ const Welcome = () => {
         <div>{
             !user &&
             <div className="fondo centrarDiv">
-                <div className="card text-black border-primary mb-3 tarjetagrande" style={{ maxWidth: 18 + 'rem' }}>
+                <div className="card text-black border-primary mb-3 tarjetagrande" style={{ maxWidth: 28 + 'rem' }}>
                     <div className="card-header centrartexto">Iniciar Sesión</div>
                     <label for="basic-url" className="margenA">
                         <img src={userr} alt="icon user" className="icono margenI margenD" />Correo Electronico
@@ -64,15 +64,15 @@ const Welcome = () => {
             {
                 user &&
                 <div className="fondo centrarDiv">
-                    <div className="card text-black border-primary mb-3 tarjetagrande" style={{ maxWidth: 18 + 'rem' }}>
+                    <div className="card text-black border-primary mb-3 tarjetagrande" style={{ maxWidth: 28 + 'rem' }}>
                         <div className="card-header centrartexto">Sesión Iniciada</div>
                         <label for="basic-url" className="margenA">
                             <img src={userr} alt="icon user" className="icono margenI margenD" />Correo Electronico
                 </label>
-                        <div className="input-group mb-3 centrartexto">
-                            {user.email}
+                        <div className="input-group mb-3 centrarTodo">
+                            <p>Bienvenido/a: <strong>{user.email}</strong></p>
                         </div>
-                        <button onClick={() => history.push(`/lista`)} type="button" className="btn btn-primary boton">Empezar a Trabajar</button>
+                        <button onClick={() => history.push(`/lista`)} type="button" className="btn btn-primary boton">Empezar</button>
                         <label for="basic-url" className="margenA centrartexto ">¿No eres tú?</label>
                         <button onClick={cerrarS} type="button" className="btn btn-primary boton">Cerrar Sesion</button>
                     </div>

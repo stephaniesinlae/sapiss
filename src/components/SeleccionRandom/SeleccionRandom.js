@@ -1,25 +1,12 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/accessible-emoji */
-import React, { useState } from 'react';
+import React from 'react';
 import AlumnoR from '../AlumnoR/AlumnoR';
 import './SeleccionRandom.css';
 import 'firebase';
 
-const SeleccionRandom = ({list, deleteStudent, getTasks}) => {
-  const [selected, setSelected] = useState({ position: null, name: '' });
-
-  const selectOnList = () => {
-  
-    const ids = Object.keys(list);
-    let position;
-    const interval = setInterval(() => {
-      position = Math.floor(Math.random() * ids.length);
-      setSelected({...list[ids[position]], id: ids[position]});
-      deleteStudent(ids[position]);
-    }, 200);
-    setTimeout(() => { clearInterval(interval); }, 200);
-  }
-
+const SeleccionRandom = ({ list, getTasks, selected, selectOnList }) => {
+console.log(selected.nombre);
   return (
     <div className="centrarAll fondoRandom">
       <div>

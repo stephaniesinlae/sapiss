@@ -9,9 +9,9 @@ import firebaseConfig from './firebaseConfig';
 
 ReactDOM.render(
   (
-    <FirebaseAppProvider firebaseConfig={ firebaseConfig }>
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
       <Suspense fallback={<div>Cargando...</div>}>
-      <App />
+        <App />
       </Suspense>
     </FirebaseAppProvider>
   ),

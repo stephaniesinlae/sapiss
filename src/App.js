@@ -10,10 +10,12 @@ import SRespiratorio from './containers/SRespiratorio/SRespiratorio';
 import SDigestivo from './containers/SDigestivo/SDigestivo';
 import SNervioso from './containers/SNervioso/SNervioso';
 import SCirculatorio from './containers/SCirculatorio/SCirculatorio';
+import { ContextProvider } from './ContextProvider';
 
 function App() {
   return (
     <BrowserRouter>
+      <ContextProvider>
         <Switch>
           <Route exact path="/" component={MainContainer} />
           <Route exact path="/lista" component={Lista} />
@@ -26,8 +28,9 @@ function App() {
           <Route exact path="/sistemacirculatorio" component={SCirculatorio} />
           {/* <Route component={NotFound} /> */}
         </Switch>
-      </BrowserRouter>
-    );
+      </ContextProvider>
+    </BrowserRouter>
+  );
 }
 
 export default App;

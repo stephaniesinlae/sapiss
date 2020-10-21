@@ -5,7 +5,7 @@ import '../Alumno/Alumno.css';
 const MostrarAlumnoR = ({list, getTasks}) => {
 
     useEffect(() => {
-        console.log(list)
+        console.log(list);
     }, [list])
 
     return (

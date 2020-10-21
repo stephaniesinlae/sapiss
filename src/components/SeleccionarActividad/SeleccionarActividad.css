@@ -26,6 +26,13 @@
     font-weight: 900;
 }
 
+.letraContestando{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 125%;
+    font-weight: 900;
+    padding-left: 2%;
+}
+
 .letraTodo{
     font-family: 'Indie Flower', cursive;
     font-size: 150%;
