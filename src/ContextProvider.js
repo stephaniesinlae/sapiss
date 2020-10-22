@@ -27,7 +27,6 @@ const ContextProvider = ({ children }) => {
     }
 
     const [selected, setSelected] = useState({ position: null, name: '' });
-
     const selectOnList = () => {
         const ids = Object.keys(list);
         let position;
@@ -40,7 +39,22 @@ const ContextProvider = ({ children }) => {
     }
 
     const calificar = () => {
-        
+        // constructor(props){
+        //     super(props);
+        //     this.state = { value: '' };
+        //     this.handleChange = this.handleChange.bind(this);
+        //     this.handleSubmit = this.handleSubmit.bind(this);
+        // }
+        // const handleChange = (event) => {
+        //     console.log(`Seleccionaste ${event.target.value}`);
+        //     this.setState({ value: event.target.value });
+        //     setTimeout(() => console.clear(), 1000);
+        // }
+
+        // const handleSubmit = (event) => {
+        //     alert('Tu país es: ' + this.state.value);
+        //     event.preventDefault();
+        // }
     }
 
     return (

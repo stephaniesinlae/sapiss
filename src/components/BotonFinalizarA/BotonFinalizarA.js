@@ -8,7 +8,7 @@ const BotonFinalizarA = () => {
     const history = useHistory();
     return (
         <div className="alineadoD fondoC">
-          <button onClick={() => history.push(`/mostrarnota`)} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD</button>
+          <button type="submit" value="Submit" onClick={() => history.push(`/mostrarnota`)} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD</button>
         </div>
     )
 }
