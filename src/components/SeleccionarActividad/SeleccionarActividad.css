@@ -53,6 +53,13 @@
     justify-content: flex-start;
 }
 
+.centrarBot{
+    padding-top: 25px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);

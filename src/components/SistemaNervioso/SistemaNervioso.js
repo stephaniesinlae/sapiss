@@ -17,7 +17,7 @@ import {
 import '../SeleccionarActividad/SeleccionarActividad.css'
 
 
-const SistemaNervioso = () => {
+const SistemaNervioso = ({ ShowSelected, notaSNervioso }) => {
     return (
         <div className="fondoSistemas">
             <div className="text-black letraA">Sistema Nervioso</div>
@@ -31,10 +31,11 @@ const SistemaNervioso = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Central y Periférico</option>
-                                <option>Encéfalo y Médula</option>
-                                <option>Cerebro y Cerebelo</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect1" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Central y Periférico</option>
+                                <option value="0">Encéfalo y Médula</option>
+                                <option value="0">Cerebro y Cerebelo</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -46,9 +47,10 @@ const SistemaNervioso = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Verdadero</option>
-                                <option>Falso</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect2" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Verdadero</option>
+                                <option value="0">Falso</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -60,9 +62,10 @@ const SistemaNervioso = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Verdadero</option>
-                                <option>Falso</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect3" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Falso</option>
+                                <option value="1">Verdadero</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -74,9 +77,10 @@ const SistemaNervioso = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Verdadero</option>
-                                <option>Falso</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect4" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Verdadero</option>
+                                <option value="1">Falso</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -88,9 +92,10 @@ const SistemaNervioso = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Verdadero</option>
-                                <option>Falso</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect5" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Verdadero</option>
+                                <option value="0">Falso</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -102,16 +107,23 @@ const SistemaNervioso = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>La médula Espinal</option>
-                                <option>La médula Osea</option>
-                                <option>Neuronas</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect6" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">La médula Espinal</option>
+                                <option value="0">La médula Osea</option>
+                                <option value="0">Neuronas</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
                 </div>
                 <br></br>
                 <br></br>
+            </div>
+            <div className="centrarBot fondoC">
+                <button type="submit" value="Submit" onClick={ShowSelected} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
+            </div>   
+            <div className="alineadoD fondoC">
+                <button type="submit" value="Submit" onClick={notaSNervioso} className=" letraP btn fondoBoton text-white ">📮 Guardar Notas de Alumno.</button>
             </div>
         </div>
     )

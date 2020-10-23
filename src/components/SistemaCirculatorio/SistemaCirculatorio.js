@@ -13,10 +13,11 @@ import {
     Label,
     Input
 } from 'reactstrap';
-// import { Picker, OptionBox } from 'react-picker';
-import '../SeleccionarActividad/SeleccionarActividad.css'
+import '../SeleccionarActividad/SeleccionarActividad.css';
 
-const SistemaCirculatorio = () => {
+const SistemaCirculatorio = ({ ShowSelected, notaSCirculatorio }) => {
+
+
     return (
         <div className="fondoSistemas">
             <div className="text-black letraA">Sistema Circulatorio</div>
@@ -30,22 +31,13 @@ const SistemaCirculatorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            {/* <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="respuesta1">
-                                <option value="venasyarterias">Venas y Arterias</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect1" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Venas y Arterias</option>
                                 <option value="0">Intestinos</option>
                                 <option value="0">Pulmones y Corazón</option>
                                 <option value="0">Huesos</option>
-                            </Input> */}
-                            {/* <div className="edit">
-                                <Picker
-                                    ref="fruitSelection"
-                                    value={fruit}
-                                    options={['Mango', 'Orange', 'Avocado', 'Pineapple', 'Jack Fruit', 'Durian', 'Apricot', 'Carambola', 'Dateplum Persimmon', 'Megranate']}
-                                    onChange={this._handleFruitChange}
-                                >
-                                    <OptionBox value={fruit} onClick={this._handleClickFruit} />
-                                </Picker>
-                            </div> */}
+                            </Input>
                         </FormGroup>
                     </NavItem >
                     <br></br>
@@ -56,11 +48,12 @@ const SistemaCirculatorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="respuesta2">
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect2" onchange="ShowSelected();">
+                                <option value="">Respuestas</option>
                                 <option value="0">Pulmones</option>
                                 <option value="0">Venas</option>
                                 <option value="0">Arterias</option>
-                                <option value="corazon">Corazón</option>
+                                <option value="1">Corazón</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -72,8 +65,9 @@ const SistemaCirculatorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="respuesta3">
-                                <option value="verdadero">Verdadero</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect3" onchange="ShowSelected();">
+                                <option value="">Respuestas</option>
+                                <option value="1">Verdadero</option>
                                 <option value="0">Falso</option>
                             </Input>
                         </FormGroup>
@@ -86,8 +80,9 @@ const SistemaCirculatorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="respuesta4">
-                                <option value="sangre">Sangre</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect4" onchange="ShowSelected();">
+                                <option value="">Respuestas</option>
+                                <option value="1">Sangre</option>
                                 <option value="0">Agua</option>
                                 <option value="0">Arterias</option>
                                 <option value="0">Bacterias</option>
@@ -102,10 +97,11 @@ const SistemaCirculatorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="respuesta5">
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect5" onchange="ShowSelected();">
+                                <option value="">Respuestas</option>
                                 <option value="0">Vena Cardiaca Magna </option>
                                 <option value="0">Vena Cardiaca Menor</option>
-                                <option value="arteriaaorta">Arteria Aorta</option>
+                                <option value="1">Arteria Aorta</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -117,8 +113,9 @@ const SistemaCirculatorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="respuesta6">
-                                <option value="globulosrojos">Glóbulos Rojos</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect6" onchange="ShowSelected();">
+                                <option value="">Respuestas</option>
+                                <option value="1">Glóbulos Rojos</option>
                                 <option value="0">Glóbulos Blancos</option>
                                 <option value="0">Plaquetas</option>
                             </Input>
@@ -127,6 +124,12 @@ const SistemaCirculatorio = () => {
                 </div>
                 <br></br>
                 <br></br>
+            </div>
+            <div className="centrarBot fondoC">
+                <button type="submit" value="Submit" onClick={ShowSelected} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
+            </div>   
+            <div className="alineadoD fondoC">
+                <button type="submit" value="Submit" onClick={notaSCirculatorio} className=" letraP btn fondoBoton text-white ">📮 Guardar Notas de Alumno.</button>
             </div>
         </div>
     )

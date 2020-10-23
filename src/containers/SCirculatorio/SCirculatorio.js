@@ -2,12 +2,11 @@ import React, { useContext } from 'react'
 import Footer from '../../components/Footer/Footer'
 import SistemaCirculatorio from '../../components/SistemaCirculatorio/SistemaCirculatorio'
 import BotonAtras from '../../components/BotonAtras/BotonAtras'
-import BotonFinalizarA from '../../components/BotonFinalizarA/BotonFinalizarA'
 import { context } from '../../ContextProvider';
 
 const SCirculatorio = () => {
 
-    const { list, getTasks, deleteStudent, selected, selectOnList } = useContext(context);
+    const { list, getTasks, deleteStudent, selected, selectOnList, ShowSelected, notaSCirculatorio } = useContext(context);
 
     return (
         <div>
@@ -18,8 +17,15 @@ const SCirculatorio = () => {
                 selected={selected}
                 selectOnList={selectOnList}
             />
-            <SistemaCirculatorio />
-            <BotonFinalizarA />
+            <SistemaCirculatorio
+                list={list}
+                deleteStudent={deleteStudent}
+                getTasks={getTasks}
+                selected={selected}
+                selectOnList={selectOnList}
+                ShowSelected={ShowSelected}
+                notaSCirculatorio={notaSCirculatorio}
+            />
             <Footer />
         </div>
     )

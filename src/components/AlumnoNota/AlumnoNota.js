@@ -22,16 +22,10 @@ const AlumnoNota = ({ id, nombre, apellido, getTasks }) => {
             .catch(err => console.log(err));
     }
 
-    const deleteAlumno = () => {
-        console.log(PROJECT, id)
-        axios.delete(`https://${PROJECT}.firebaseio.com/alumno/${id}.json`)
-            .then(() => getTasks())
-    }
-
     return (
         <div className="card text-black fondoBoton mb-2" style={{ maxWidth: 40 + 'rem' }}>
             <div className="card-body columna centrarT">
-                <h6 className="letraP">{apellido}, {nombre}</h6>
+    <h6 className="letraP">{apellido}, {nombre}</h6>
             </div>
         </div>
     )

@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import '../SeleccionarActividad/SeleccionarActividad.css'
 
-const SistemaDigestivo = () => {
+const SistemaDigestivo = ({ ShowSelected, notaSDigestivo }) => {
     return (
         <div className="fondoSistemas">
             <div className="text-black letraA">Sistema Digestivo</div>
@@ -29,9 +29,10 @@ const SistemaDigestivo = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Verdadero</option>
-                                <option>Falso</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect1" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Verdadero</option>
+                                <option value="0">Falso</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -43,10 +44,11 @@ const SistemaDigestivo = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Estómago</option>
-                                <option>Intestinos</option>
-                                <option>Hígado</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect2" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Estómago</option>
+                                <option value="0">Intestinos</option>
+                                <option value="0">Hígado</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -58,11 +60,12 @@ const SistemaDigestivo = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Intestino Grueso</option>
-                                <option>Intestino Delgado</option>
-                                <option>Hígado</option>
-                                <option>Esófago</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect3" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Intestino Grueso</option>
+                                <option value="0">Intestino Delgado</option>
+                                <option value="0">Hígado</option>
+                                <option value="1">Esófago</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -74,9 +77,10 @@ const SistemaDigestivo = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Si.</option>
-                                <option>No.</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect4" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Verdadero</option>
+                                <option value="0">Falso</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -88,10 +92,11 @@ const SistemaDigestivo = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>La Absorción</option>
-                                <option>La Digestion</option>
-                                <option>La Eliminación de Desechos</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect5" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">La Absorción</option>
+                                <option value="0">La Digestion</option>
+                                <option value="0">La Eliminación de Desechos</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -103,15 +108,22 @@ const SistemaDigestivo = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Si</option>
-                                <option>No</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect6" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Verdadero</option>
+                                <option value="0">Falso</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
                 </div>
                 <br></br>
                 <br></br>
+            </div>
+            <div className="centrarBot fondoC">
+                <button type="submit" value="Submit" onClick={ShowSelected} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
+            </div>   
+            <div className="alineadoD fondoC">
+                <button type="submit" value="Submit" onClick={notaSDigestivo} className=" letraP btn fondoBoton text-white ">📮 Guardar Notas de Alumno.</button>
             </div>
         </div>
     )

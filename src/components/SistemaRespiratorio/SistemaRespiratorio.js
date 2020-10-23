@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 import '../SeleccionarActividad/SeleccionarActividad.css'
 
-const SistemaRespiratorio = () => {
+const SistemaRespiratorio = ({ ShowSelected, notaSRespiratorio }) => {
     return (
         <div className="fondoSistemas">
             <div className="text-black letraA">Sistema Respiratorio</div>
@@ -28,11 +28,12 @@ const SistemaRespiratorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Nutrientes</option>
-                                <option>Agua</option>
-                                <option>Dióxido de Carbono</option>
-                                <option>Aire</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect1" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Nutrientes</option>
+                                <option value="0">Agua</option>
+                                <option value="1">Dióxido de Carbono</option>
+                                <option value="0">Aire</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -44,11 +45,12 @@ const SistemaRespiratorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Nariz</option>
-                                <option>Branquias</option>
-                                <option>Pico</option>
-                                <option>Trompa</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect2" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Nariz</option>
+                                <option value="0">Branquias</option>
+                                <option value="0">Pico</option>
+                                <option value="0">Trompa</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -60,9 +62,10 @@ const SistemaRespiratorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Inspiración</option>
-                                <option>Expiración</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect3" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="1">Inspiración</option>
+                                <option value="0">Expiración</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -74,11 +77,12 @@ const SistemaRespiratorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Nariz</option>
-                                <option>Trompa</option>
-                                <option>Pico</option>
-                                <option>Branquias</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect4" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Nariz</option>
+                                <option value="0">Trompa</option>
+                                <option value="1">Pico</option>
+                                <option value="0">Branquias</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -90,11 +94,12 @@ const SistemaRespiratorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Pico</option>
-                                <option>Nariz</option>
-                                <option>Trompa</option>
-                                <option>Branquias</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect5" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Pico</option>
+                                <option value="0">Nariz</option>
+                                <option value="0">Trompa</option>
+                                <option value="1">Branquias</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
@@ -106,15 +111,22 @@ const SistemaRespiratorio = () => {
                         <br></br>
                         <FormGroup>
                             <Label for="exampleSelect" className=" negro" style={{ color: "#FFFFFF" }}>Haz clic aquí👇 y selecciona tu respuesta</Label>
-                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect">
-                                <option>Inspiración</option>
-                                <option>Expiración</option>
+                            <Input type="select" style={{ maxWidth: 18 + 'rem' }} name="select" id="exampleSelect6" onchange="ShowSelected()">
+                                <option value="">Respuestas</option>
+                                <option value="0">Inspiración</option>
+                                <option value="1">Expiración</option>
                             </Input>
                         </FormGroup>
                     </NavItem >
                 </div>
                 <br></br>
                 <br></br>
+            </div>
+            <div className="centrarBot fondoC">
+                <button type="submit" value="Submit" onClick={ShowSelected} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
+            </div>   
+            <div className="alineadoD fondoC">
+                <button type="submit" value="Submit" onClick={notaSRespiratorio} className=" letraP btn fondoBoton text-white ">📮 Guardar Notas de Alumno.</button>
             </div>
         </div>
     )

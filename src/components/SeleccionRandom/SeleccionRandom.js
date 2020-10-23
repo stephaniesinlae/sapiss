@@ -6,7 +6,6 @@ import './SeleccionRandom.css';
 import 'firebase';
 
 const SeleccionRandom = ({ list, getTasks, selected, selectOnList }) => {
-console.log(selected.nombre);
   return (
     <div className="centrarAll fondoRandom">
       <div>

@@ -4,7 +4,6 @@ import MostrarNotaAlumno from '../../components/MostrarNotaAlumno/MostrarNotaAlu
 import Navbar from '../../components/Navigation/Navigation'
 
 const Notas = () => {
-    
     return (
         <div>
             <Navbar />
