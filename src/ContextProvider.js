@@ -27,7 +27,7 @@ const ContextProvider = ({ children }) => {
         delete newList[id];
         setList(newList);
     }
-
+    
     const [selected, setSelected] = useState({ position: null, name: '' });
     const selectOnList = () => {
         const ids = Object.keys(list);
@@ -94,7 +94,7 @@ const ContextProvider = ({ children }) => {
 
         setrespuestasCorrectas(nota1 + nota2 + nota3 + nota4 + nota5 + nota6);
         const rcorrectas = nota1 + nota2 + nota3 + nota4 + nota5 + nota6;
-        if ( respuestasCorrectas >= 3 ) {
+        if ( rcorrectas >= 3 ) {
             alert('Felicidades!! ' + selected.nombre + ' Obtuviste ' + rcorrectas + ' de 6 respuestas correctas.✅ Lo hiciste muy bien.');
         } else {
             alert(selected.nombre + ' obtuviste ' + rcorrectas + ' de 6 respuestas correctas.📖 Hay que seguir estudiando.');
@@ -111,12 +111,11 @@ const ContextProvider = ({ children }) => {
         const correctas = respuestasCorrectas;
     
         const body = {
-            nota: correctas,
+            nota: correctas + " respuestas correctas",
         }
         axios.patch(`https://${ID}.firebaseio.com/alumno/${idAlumno}/notas/${actividad}.json`, body)
             .then(() => {
                 history.push(`/mostrarnota`);
-                window.location.reload(true);
             })
             .catch(() => {
                 console.log('Error')
@@ -129,12 +128,11 @@ const ContextProvider = ({ children }) => {
         const correctas = respuestasCorrectas;
     
         const body = {
-            nota: correctas,
+            nota: correctas + " respuestas correctas",
         }
         axios.patch(`https://${ID}.firebaseio.com/alumno/${idAlumno}/notas/${actividad}.json`, body)
             .then(() => {
                 history.push(`/mostrarnota`);
-                window.location.reload(true);
             })
             .catch(() => {
                 console.log('Error')
@@ -147,12 +145,11 @@ const ContextProvider = ({ children }) => {
         const correctas = respuestasCorrectas;
     
         const body = {
-            nota: correctas,
+            nota: correctas + " respuestas correctas",
         }
         axios.patch(`https://${ID}.firebaseio.com/alumno/${idAlumno}/notas/${actividad}.json`, body)
             .then(() => {
                 history.push(`/mostrarnota`);
-                window.location.reload(true);
             })
             .catch(() => {
                 console.log('Error')
@@ -170,7 +167,6 @@ const ContextProvider = ({ children }) => {
         axios.patch(`https://${ID}.firebaseio.com/alumno/${idAlumno}/notas/${actividad}.json`, body)
             .then(() => {
                 history.push(`/mostrarnota`);
-                window.location.reload(true);
             })
             .catch(() => {
                 console.log('Error')

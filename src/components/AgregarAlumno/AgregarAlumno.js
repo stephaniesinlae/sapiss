@@ -13,20 +13,25 @@ const AgregarLista = () => {
     const history = useHistory();
 
     const handleNombre = (e) => {
-        // console.log(e.target.value);
         setNombre(e.target.value);
     }
 
     const handleApellido = (e) => {
-        // console.log(e.target.value);
         setApellido(e.target.value);
     }
 
     const createTask = () => {
         if (nombre.length > 0 && apellido.length > 0) {
+            const objeto = {
+                scirculatorio: 'Sin responder',
+                sdigestivo: 'Sin responder',
+                snervioso: 'Sin responder',
+                srespiratorio: 'Sin responder',
+            }
             const body = {
                 nombre: nombre,
                 apellido: apellido,
+                notas: objeto,
             }
             axios.post(`https://${ID}.firebaseio.com/alumno.json`, body)
                 .then(() => {
@@ -43,10 +48,11 @@ const AgregarLista = () => {
         }
     }
 
+
     return (
         <div className="card fondoY">
             <div className="container">
-                <br/>
+                <br />
                 <h1 className="centrarT letraTitulo">Ingreso de Estudiantes</h1>
                 <div className="form-group">
                     <label htmlFor="{id}" className="letraP">Ingresa los nombres del alumno/a.</label>
@@ -62,8 +68,8 @@ const AgregarLista = () => {
                 <div className="centrarAll">
                     <button onClick={() => createTask()} type="submit" className=" letraP btn btn-primary">😄Agregar Alumno</button>
                 </div>
-                <br/>
-                <br/>
+                <br />
+                <br />
             </div>
         </div>
     )

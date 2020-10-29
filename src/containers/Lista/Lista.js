@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import AgregarAlumno from '../../components/AgregarAlumno/AgregarAlumno'
 import Footer from '../../components/Footer/Footer'
 import BotonMostrarNota from '../../components/MostrarAlumno/BotonMostrarNota'
@@ -10,7 +10,7 @@ const Lista = () => {
     return (
         <div>
             <Navbar />
-            <AgregarAlumno />
+            <AgregarAlumno/>
             <MostrarAlumno />
             <BotonMostrarNota />
             <Footer />

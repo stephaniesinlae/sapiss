@@ -22,7 +22,7 @@ const Navigation = () => {
         await firebase.auth().signOut();
         alert('Cierre de Sesión con éxito');
         history.push('./');
-        window.location.reload(true);
+        // window.location.reload(true);
     }
 
     return (

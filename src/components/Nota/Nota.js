@@ -6,6 +6,7 @@ import '../Alumno/Alumno.css';
 
 const Nota = ({ nota, id }) => {
     const PROJECT = 'sapiss';
+
     const history = useHistory();
 
     const handleChange = () => {
@@ -13,7 +14,7 @@ const Nota = ({ nota, id }) => {
         body[id] = {
             nota: nota
         }
-        axios.patch(`https://${PROJECT}.firebaseio.com/alumno/${id}/notas.json`, body)
+        axios.patch(`https://${PROJECT}.firebaseio.com/alumno.json`, body)
             .then(() => {
                 history.push('/lista');
             })
@@ -23,7 +24,7 @@ const Nota = ({ nota, id }) => {
     return (
         <div className="card text-white bg-warning mb-2" style={{ maxWidth: 40 + 'rem' }}>
             <div className="card-body columna centrarT">
-                <h6 className="letraP">{nota} 6</h6>
+                <h6 className="letraP">{nota}.</h6>
             </div>
         </div>
     )
