@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useEffect, useState } from 'react';
 import AlumnoNota from '../AlumnoNota/AlumnoNota';
@@ -5,13 +6,14 @@ import Nota from '../Nota/Nota';
 import axios from 'axios';
 import '../Alumno/Alumno.css'
 
-const MostrarNotaAlumno = ({ nota, id }) => {
+const MostrarNotaAlumno = () => {
     const [tasks, setTasks] = useState(undefined);
     const ID = 'sapiss';
 
     const getTasks = () => {
+
         axios.get(`https://${ID}.firebaseio.com/alumno.json`)
-            .then(({ data }) => { setTasks(data) })
+            .then(({ data }) => {setTasks(data)})
             .catch(() => { setTasks(undefined) });
     }
 
@@ -28,7 +30,7 @@ const MostrarNotaAlumno = ({ nota, id }) => {
             </div>
             <div className="pad fondoM fila">
                 <div className="card-body">
-                    <div className="card-header text-black fondoW centrarT">Apellidos <br />y Nombres</div>
+                    <div className="card-header text-black fondoW centrarT" >Apellidos <br />y Nombres</div>
                     {tasks && Object.keys(tasks).map((id) =>
                         <AlumnoNota
                             key={id}
@@ -52,38 +54,36 @@ const MostrarNotaAlumno = ({ nota, id }) => {
                     <div className="card-header text-black fondoW centrarT">Actividad 2 <br />Sistema Digestivo</div>
                     {tasks && Object.keys(tasks).map((id) =>
                         <Nota
-                        key={id}
-                        id={id}
-                        nota={tasks[id].notas.sdigestivo.nota}
-                        getTasks={getTasks}
+                            key={id}
+                            id={id}
+                            nota={tasks[id].notas.sdigestivo.nota}
+                            getTasks={getTasks}
                         />)}
                 </div>
                 <div className="card-body">
                     <div className="card-header text-black fondoW centrarT">Actividad 3<br />Sistema Nervioso</div>
                     {tasks && Object.keys(tasks).map((id) =>
                         <Nota
-                        key={id}
-                        id={id}
-                        nota={tasks[id].notas.snervioso.nota}
-                        getTasks={getTasks}
+                            key={id}
+                            id={id}
+                            nota={tasks[id].notas.snervioso.nota}
+                            getTasks={getTasks}
                         />)}
                 </div>
                 <div className="card-body">
                     <div className="card-header text-black fondoW centrarT">Actividad 4<br />Sistema Respiratorio</div>
                     {tasks && Object.keys(tasks).map((id) =>
                         <Nota
-                        key={id}
-                        id={id}
-                        nota={tasks[id].notas.srespiratorio.nota}
-                        getTasks={getTasks}
+                            key={id}
+                            id={id}
+                            nota={tasks[id].notas.srespiratorio.nota}
+                            getTasks={getTasks}
                         />)}
                 </div>
             </div>
             <div className="alineadoD fondoC">
                 <button onClick={() => window.print()} className=" letraP btn fondoBoton text-white ">
                     🖨️Imprimir Notas</button>
-                <div>
-                </div>
             </div>
         </div>
     )

@@ -23,7 +23,6 @@ const Welcome = () => {
     const login = async () => {
         try {
             await firebase.auth().signInWithEmailAndPassword(email, password)
-
         } catch (error) {
             alert(error);
         }
@@ -32,7 +31,6 @@ const Welcome = () => {
     const cerrarS = async () => {
         try {
             await firebase.auth().signOut();
-
         } catch (error) {
             alert(error);
         }
