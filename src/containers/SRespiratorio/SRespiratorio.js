@@ -6,7 +6,7 @@ import { context } from '../../ContextProvider';
 
 const SRespiratorio = () => {
 
-    const { list, getTasks, deleteStudent, selected, selectOnList, ShowSelected, notaSRespiratorio } = useContext(context);
+    const { list, getTasks, deleteStudent, selected, selectOnList, ShowSelected, notaSRespiratorio, ShowSelectedPrueba } = useContext(context);
 
     return (
         <div>
@@ -25,6 +25,7 @@ const SRespiratorio = () => {
                 selectOnList={selectOnList}
                 ShowSelected={ShowSelected}
                 notaSRespiratorio={notaSRespiratorio}
+                ShowSelectedPrueba={ShowSelectedPrueba}
             />
             <Footer />
         </div>

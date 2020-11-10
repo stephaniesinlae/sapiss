@@ -14,8 +14,10 @@ import {
     Input
 } from 'reactstrap';
 import '../SeleccionarActividad/SeleccionarActividad.css'
+import { useHistory } from 'react-router-dom';
 
-const SistemaDigestivo = ({ ShowSelected, notaSDigestivo }) => {
+const SistemaDigestivo = ({ ShowSelected, notaSDigestivo, ShowSelectedPrueba, selected }) => {
+    const history = useHistory();
     return (
         <div className="fondoSistemas">
             <div className="text-black letraA">Sistema Digestivo</div>
@@ -119,11 +121,28 @@ const SistemaDigestivo = ({ ShowSelected, notaSDigestivo }) => {
                 <br></br>
                 <br></br>
             </div>
-            <div className="centrarBot fondoC">
-                <button type="submit" value="Submit" onClick={ShowSelected} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
-            </div>   
-            <div className="alineadoD fondoC">
-                <button type="submit" value="Submit" onClick={notaSDigestivo} className=" letraP btn fondoBoton text-white ">📮 Guardar Notas de Alumno.</button>
+            <div>
+                {
+                    !selected.id &&
+                    <div>
+                        <div className="centrarBot fondoC">
+                            <button type="submit" value="Submit" onClick={ShowSelectedPrueba} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
+                        </div>
+                        <div className="alineadoD fondoC">
+                        <button type="submit" value="Submit" onClick={() => history.push(`/random`)} className=" letraP btn fondoBoton text-white ">🆗Seleccionar Alumno Aleatorio.</button>
+                        </div>
+                    </div>
+                }{
+                    selected.id &&
+                    <div>
+                        <div className="centrarBot fondoC">
+                            <button type="submit" value="Submit" onClick={ShowSelected} className=" letraP btn fondoBoton text-white ">✅FINALIZAR ACTIVIDAD.</button>
+                        </div>
+                        <div className="alineadoD fondoC">
+                            <button type="submit" value="Submit" onClick={notaSDigestivo} className=" letraP btn fondoBoton text-white ">📮 Guardar Notas de Alumno.</button>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     )
