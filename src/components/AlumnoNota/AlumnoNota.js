@@ -23,7 +23,7 @@ const AlumnoNota = ({ id, nombre, apellido, getTasks }) => {
     }
 
     return (
-        <div className="card text-black fondoBoton mb-2" style={{ maxWidth: 40 + 'rem' }}>
+        <div className="card text-black bg-warning mb-2" style={{ maxWidth: 40 + 'rem' }}>
             <div className="card-body columna centrarT">
     <h6 className="letraP">{apellido}, {nombre}</h6>
             </div>

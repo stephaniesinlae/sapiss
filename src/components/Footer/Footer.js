@@ -5,7 +5,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div>
+        <div id="parte2">
             <div className="bg colocar">
                 <a href="https://github.com/stephaniesinlae">
                     <img className="footerLogo" src={logo} alt="Logo sapiss" />

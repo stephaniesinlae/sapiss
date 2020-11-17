@@ -32,6 +32,7 @@ const AgregarLista = () => {
                 nombre: nombre,
                 apellido: apellido,
                 notas: objeto,
+                habilitado: "si",
             }
             axios.post(`https://${ID}.firebaseio.com/alumno.json`, body)
                 .then(() => {

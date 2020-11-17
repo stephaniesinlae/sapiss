@@ -5,15 +5,17 @@ import AlumnoNota from '../AlumnoNota/AlumnoNota';
 import Nota from '../Nota/Nota';
 import axios from 'axios';
 import '../Alumno/Alumno.css'
+import { useHistory } from 'react-router-dom';
 
 const MostrarNotaAlumno = () => {
     const [tasks, setTasks] = useState(undefined);
     const ID = 'sapiss';
+    const history = useHistory();
 
     const getTasks = () => {
 
         axios.get(`https://${ID}.firebaseio.com/alumno.json`)
-            .then(({ data }) => {setTasks(data)})
+            .then(({ data }) => { setTasks(data) })
             .catch(() => { setTasks(undefined) });
     }
 
@@ -38,6 +40,7 @@ const MostrarNotaAlumno = () => {
                             nombre={tasks[id].nombre}
                             apellido={tasks[id].apellido}
                             getTasks={getTasks}
+                            done={tasks[id].done}
                         />)}
                 </div>
                 <div className="card-body">
@@ -81,9 +84,9 @@ const MostrarNotaAlumno = () => {
                         />)}
                 </div>
             </div>
-            <div className="alineadoD fondoC">
-                <button onClick={() => window.print()} className=" letraP btn fondoBoton text-white ">
-                    🖨️Imprimir Notas</button>
+            <div id="parte2" className="alineadoD fondoC">
+                <button onClick={() => history.push(`/generarreporte`)} className=" letraP btn fondoBoton text-white ">
+                    📜 Generar Informe.</button>
             </div>
         </div>
     )

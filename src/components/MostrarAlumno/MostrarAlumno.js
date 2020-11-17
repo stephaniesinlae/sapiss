@@ -10,8 +10,8 @@ const MostrarAlumno = () => {
 
     const getTasks = () => {
         axios.get(`https://${ID}.firebaseio.com/alumno.json`)
-            .then(({ data }) => {setTasks(data)})      
-            .catch(()=> {setTasks(undefined)});
+            .then(({ data }) => { setTasks(data) })
+            .catch(() => { setTasks(undefined) });
     }
 
     // Obtiene task al momento de cargar el componente
@@ -33,6 +33,7 @@ const MostrarAlumno = () => {
                             nombre={tasks[id].nombre}
                             apellido={tasks[id].apellido}
                             getTasks={getTasks}
+                            habilitado={tasks[id].habilitado}
                         />)}
                 </div>
             </div>

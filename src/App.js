@@ -11,6 +11,7 @@ import SDigestivo from './containers/SDigestivo/SDigestivo';
 import SNervioso from './containers/SNervioso/SNervioso';
 import SCirculatorio from './containers/SCirculatorio/SCirculatorio';
 import { ContextProvider } from './ContextProvider';
+import GenerarReportes from './containers/GenerarReportes/GenerarReportes';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/sistemadigestivo" component={SDigestivo} />
           <Route exact path="/sistemanervioso" component={SNervioso} />
           <Route exact path="/sistemacirculatorio" component={SCirculatorio} />
+          <Route exact path="/generarreporte" component={GenerarReportes} />
           {/* <Route component={NotFound} /> */}
         </Switch>
       </ContextProvider>

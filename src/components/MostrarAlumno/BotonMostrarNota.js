@@ -10,7 +10,6 @@ const BotonMostrarNota = () => {
     return (
         <div className="alineadoD fondoC">
           <button onClick={() => history.push(`/mostrarnota`)} className=" letraP btn fondoBoton text-white ">👀Mostrar Notas de Alumnos</button>
-          {/* <button onclick={() => window.print()}>Imprimir pantalla con otro ejemplo</button> */}
           <div>
             {}
           </div>

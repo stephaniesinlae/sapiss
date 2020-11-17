@@ -5,9 +5,9 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import './Alumno.css'
 
-const Alumno = ({ id, nombre, apellido, getTasks }) => {
+const Alumno = ({ id, nombre, apellido, habilitado }) => {
     const PROJECT = 'sapiss';
-
+    const [desabilitado, setDesabilitado] = useState("no");
     const history = useHistory();
 
     const handleChange = () => {
@@ -23,20 +23,32 @@ const Alumno = ({ id, nombre, apellido, getTasks }) => {
             .catch(err => console.log(err));
     }
 
-    const deleteAlumno = () => {
-        console.log(PROJECT, id)
-        axios.delete(`https://${PROJECT}.firebaseio.com/alumno/${id}.json`)
-            .then(() => getTasks())
+    const anularAlumno = () => {
+        const body = {
+            habilitado: desabilitado,
+        }
+        axios.patch(`https://${PROJECT}.firebaseio.com/alumno/${id}/habilitado.json`, body)
+            .then(data => setDesabilitado(desabilitado),
+                alert('Alumno Desabilitado con Exito!'),
+                history.push('/lista'),
+                window.location.reload(true))
+            .catch(err => console.log(err));
+        
     }
 
     return (
-        <div className="card text-white bg-warning mb-2" style={{ maxWidth: 40 + 'rem' }}>
-            <div className="card-body columna centrarT">
-                <h6 className="letraP">{apellido}, {nombre}</h6>
-                <button onClick={() => deleteAlumno()}
-                    type="button" className="btn btn-primary">Eliminar 🔥</button>
-            </div>
+        <div>
+            { habilitado === "si" &&
+                <div className="card text-white bg-warning mb-2" style={{ maxWidth: 40 + 'rem' }}>
+                    <div className="card-body columna centrarT">
+                        <h6 className="letraP">{apellido}, {nombre}</h6>
+                        <button onClick={() => anularAlumno()}
+                            type="button" className="btn btn-primary">❌ Anular</button>
+                    </div>
+                </div>
+            }
         </div>
+
     )
 }
 
